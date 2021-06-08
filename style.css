@@ -135,7 +135,7 @@ header p {
 /* End of Navbar */
 
 /* Content */
-.mainBody {
+.movie-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
