@@ -27,12 +27,20 @@ header {
     justify-content: space-between;
     background-color: var(--secondary-color)
 }
+
+
+
 header p {
     font-family: 'Anton', sans-serif;
     font-size: xx-large; 
     margin: 0;
     font-weight: bold;
     text-shadow: 0 0 1rem #fff;
+}
+@media only screen and (max-width: 425px) {
+    header p {
+      display: none;  
+    } 
 }
 .search {
     background-color: transparent;
@@ -58,7 +66,7 @@ main {
 }
 
 .movie {
-    width: 30rem;
+    width: 31rem;
     margin: 1.6rem;
     background-color: var(--secondary-color);
     box-shadow: 0 0.4rem 0.5rem rgba(0, 0, 0, 0.2);
@@ -99,6 +107,7 @@ main {
 
 .overview {
     background-color: #fff;
+    font-size: 1.4rem;
     font-family: "Poppins", sans-serif;
     padding: 3.2rem;
     position: absolute;
