@@ -1,3 +1,4 @@
+// Send API calls to the database
 const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=1f93f55d9ccd75427e330dc8d18c9386&page=3`;
 const IMG_PATH = `https://image.tmdb.org/t/p/w1280`;
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=1f93f55d9ccd75427e330dc8d18c9386&query="`;
@@ -62,4 +63,16 @@ form.addEventListener('submit', (e) => {
     } else {
         window.location.reload()
     }
+})
+
+// Open close the nav menu
+const open_btn = document.querySelector('.open-btn');
+const close_btn = document.querySelector('.close-btn');
+const nav = document.querySelectorAll('.nav');
+
+open_btn.addEventListener('click', () => {
+    nav.forEach(nav_element => nav_element.classList.add('visible'))
+})
+close_btn.addEventListener('click', () => {
+    nav.forEach(nav_element => nav_element.classList.remove('visible'))
 })
