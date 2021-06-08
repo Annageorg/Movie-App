@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 :root {
-    --primary-color: #22254b;
-    --secondary-color: #373b69;
+    --primary-color: #131212;
+    --secondary-color: #830303;
+    --search-color: #fff;
 }
 
 html {
@@ -22,12 +24,15 @@ body {
 header {
     padding: 1.6rem;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     background-color: var(--secondary-color)
 }
-
-.large {
-    font-size: 2rem;
+header p {
+    font-family: 'Anton', sans-serif;
+    font-size: xx-large; 
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 0 0 1rem #fff;
 }
 .search {
     background-color: transparent;
@@ -39,7 +44,7 @@ header {
     color: #fff;
 }
 .search::placeholder {
-    color: #7378c5;
+    color: var(--search-color);
 }
 .search:focus {
     outline: none;
@@ -49,6 +54,7 @@ header {
 main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .movie {
@@ -93,6 +99,7 @@ main {
 
 .overview {
     background-color: #fff;
+    font-family: "Poppins", sans-serif;
     padding: 3.2rem;
     position: absolute;
     left: 0;

@@ -2,64 +2,34 @@
 <html lang="en">
 
 <head>
+    <link rel="icon" href="./film.ico" />
+    <title>The Movie database</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link 
-        rel="stylesheet" 
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer" 
+    <!-- Fontawesome for inside the placeholder -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+        rel="stylesheet"
     />
+    <!-- Fontawesome for the webpage -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
-    <title>Movie App</title>
 </head>
 
 <body>
     <header>
+        <button class="nav-btn open-btn">
+            
+        </button>
+        <p>Movie DB</p>
         <form id="form">
-            <span class='large'><i class="fas fa-search large"></i></span>
-          <input type="text" id="search" class="search" placeholder="Search">  
+            <input type="text" id="search" class="search" placeholder="&#xF002; Search" style="font-family:Poppins, FontAwesome">
         </form>
     </header>
-    <main id="main">
-        <div class="movie">
-            <img src="https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_960_720.jpg" alt="">
-            <div class="movie-info">
-                <h3>Movie Title</h3>
-                <span class="green">9.8</span>
-            </div>
-            <div class="overview">
-                <h3>Overview</h3>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem deserunt laboriosam quam dolorum? Quam, officia aperiam obcaecati qui eligendi itaque?
-            </div>
-        </div>
 
-        <div class="movie">
-            <img src="https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_960_720.jpg" alt="">
-            <div class="movie-info">
-                <h3>Movie Title</h3>
-                <span class="orange">5.8</span>
-            </div>
-            <div class="overview">
-                <h3>Overview</h3>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem deserunt laboriosam quam dolorum? Quam, officia aperiam obcaecati qui eligendi itaque?
-            </div>
-        </div>
-
-        <div class="movie">
-            <img src="https://cdn.pixabay.com/photo/2019/11/07/20/48/cinema-4609877_960_720.jpg" alt="">
-            <div class="movie-info">
-                <h3>Movie Title</h3>
-                <span class="red">3.8</span>
-            </div>
-            <div class="overview">
-                <h3>Overview</h3>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem deserunt laboriosam quam dolorum? Quam, officia aperiam obcaecati qui eligendi itaque?
-            </div>
-        </div>
-    </main>
+    <main id="main"></main>
 
     <script src="./script.js"></script>
 </body>
