@@ -1,5 +1,7 @@
 // Send API calls to the database
-const API_URL = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=1f93f55d9ccd75427e330dc8d18c9386&page=3`;
+const API_URL_1 = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=1f93f55d9ccd75427e330dc8d18c9386&page=1`;
+const API_URL_2 = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=1f93f55d9ccd75427e330dc8d18c9386&page=2`;
+const API_URL_3 = `https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=1f93f55d9ccd75427e330dc8d18c9386&page=3`;
 const IMG_PATH = `https://image.tmdb.org/t/p/w1280`;
 const SEARCH_API = `https://api.themoviedb.org/3/search/movie?api_key=1f93f55d9ccd75427e330dc8d18c9386&query="`;
 
@@ -7,11 +9,17 @@ const content = document.getElementById('movie-container')
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 
-const getMovies = async (url) => {
-    const res = await fetch(url)
-    const data = await res.json()
+const getMovies1 = async (url1, url2, url3) => {
+    const res1 = await fetch(url1)
+    const data1 = await res1.json()
+    const res2 = await fetch (url2)
+    const data2 = await res2.json()
+    const res3 = await fetch (url3)
+    const data3= await res3.json()
 
-    showMovies(data.results);
+    const add = data1.results.concat(data2.results)
+    const data = add.concat(data3.results)
+    showMovies(data);
 }
 
 const showMovies = (movies) => {
@@ -49,7 +57,14 @@ const getClassByRating = (vote) => {
 }
 
 //Get initial movies
-getMovies(API_URL)
+getMovies1(API_URL_1, API_URL_2, API_URL_3)
+
+const findMovies = async (url) => {
+    const res = await fetch(url)
+    const data = await res.json()
+
+    showMovies(data.results);
+}
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -57,7 +72,7 @@ form.addEventListener('submit', (e) => {
     const searchTerm = search.value
 
     if (searchTerm && searchTerm !== '') {
-        getMovies(SEARCH_API + searchTerm);
+        findMovies(SEARCH_API + searchTerm);
 
         search.value = '';
     } else {
